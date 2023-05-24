@@ -18,16 +18,16 @@ class TrainsTableSeeder extends Seeder
     {
        for($i = 0; $i < 20; $i++) {
             $newTrain = new Train();
-            $newTrain->company = $faker->words(5, true);
-            $newTrain->departure_station = $faker->words(5, true);
-            $newTrain->arrival_station = $faker->words(5, true);
-            $newTrain->departure_time = $faker->time();
-            $newTrain->arrival_time = $faker->time();
-            $newTrain->train_code = $faker->ean8();
-            $newTrain->carriages = $faker->numberBetween(1, 50);
-            $newTrain->delay = $faker->boolean();
-            $newTrain->deleted = $faker->boolean();
-            $newTrain->save();
+            $newTrain->azienda = $faker->words(5, true);
+            $newTrain->stazione_partenza = $faker->words(5, true);
+            $newTrain->stazione_arrivo = $faker->words(5, true);
+            $newTrain->orario_partenza = $faker->time();
+            $newTrain->orario_arrivo = $faker->time();
+            $newTrain->codice = $faker->ean8();
+            $newTrain->vagoni = $faker->numberBetween(1, 50);
+            $newTrain->in_orario = $faker->boolean();
+            $newTrain->cancellato = $faker->boolean();
+            // $newTrain->save();
        }
     }
 }
